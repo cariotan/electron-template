@@ -15,7 +15,7 @@ app.whenReady().then(function () {
 
 	browserWindow.loadFile('public/index.html')
 
-	browserWindow.webContents.on('did-finish-load', () => browserWindow.show())
+	browserWindow.webContents.once('did-finish-load', () => browserWindow.show())
 
 	ipcMain.on('toggleDevTools', () => browserWindow.webContents.toggleDevTools())
 
