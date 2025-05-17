@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+	<meta charset='UTF-8'>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+	<title>Document</title>
+	<link rel='stylesheet' href='../css/tailwind.css'>
+	<script src='../js/htmx.js'></script>
+	<script defer src='../js/alpine.js'></script>
+	<script src='../js/jquery.js'></script>
+	<script src='../js/tailwind.js'></script>
+</head>
+
+<body>
+	<button onclick='window.electron.toggleDevTools()'>Toggle Dev Tools</button>
+	<%- body %>
+
+	<script>
+		$(window).on('load', async function () {
+			const bounds = localStorage.getItem('bounds')
+			if(bounds) {
+				await window.electron.setBounds(bounds)
+			}
+		})
+
+		$(window).on('unload', async function () {
+			const bounds = await window.electron.getBounds()
+			localStorage.setItem('bounds', JSON.stringify(bounds))
+		})
+	</script>
+</body>
+
+</html>

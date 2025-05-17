@@ -1,0 +1,88 @@
+# --- Node / Electron ---
+node_modules/
+dist/
+out/
+build/
+temp/
+.DS_Store
+*.log
+*.tsbuildinfo
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+.env
+.env.*
+
+# Electron specific
+electron-out/
+*.asar
+*.local
+.cache/
+electron-builder.yaml
+
+# VS Code config (optional)
+.vscode/
+
+# --- Visual Studio / .NET ---
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.vcxproj*
+*.csproj.user
+*.pdb
+*.cache
+*.dbmdl
+*.bak
+*.backup
+*.orig
+*.vspscc
+*.vssscc
+*.Publish.xml
+
+# Build results
+bin/
+obj/
+TestResults/
+Generated_Code/
+AppPackages/
+*.nupkg
+*.snupkg
+
+# Visual Studio
+.vs/
+.vscode/
+
+# Rider
+.idea/
+
+# Others
+_ReSharper*/
+*.resharper
+*.sln.iml
+*.sln.ide
+
+# IIS Express
+/.vs/
+
+# Logs and local secrets
+*.log
+secrets.json
+
+# Runtime folders
+wwwroot/node_modules/
+wwwroot/lib/
+
+# Mac
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# Tailwindcss
+**/tailwind.css
+
+public/
