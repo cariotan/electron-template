@@ -1,4 +1,4 @@
-const { contextBridge, ipcRenderer, ipcMain } = require("electron");
+const { contextBridge, ipcRenderer, ipcMain } = require('electron');
 
 contextBridge.exposeInMainWorld('electron', {
 	setBounds: bounds => ipcRenderer.send('setBounds', bounds),

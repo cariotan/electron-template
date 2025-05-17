@@ -1,7 +1,7 @@
-const { BrowserWindow, app, ipcMain } = require("electron")
+const { BrowserWindow, app, ipcMain } = require('electron')
 const path = require('path')
 
-app.whenReady().then(function() {
+app.whenReady().then(function () {
 	const browserWindow = new BrowserWindow({
 		show: false,
 		width: 1172,

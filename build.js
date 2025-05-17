@@ -8,7 +8,7 @@ const indexHtml = ejs.render(base, { body: index })
 
 // Ensure the 'public' folder exists
 if (!fs.existsSync('public')) {
-  fs.mkdirSync('public', { recursive: true })
+	fs.mkdirSync('public', { recursive: true })
 }
 
 fs.writeFileSync('public/index.html', indexHtml)
